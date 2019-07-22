@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'todo-web-app';
+
+  constructor(
+    private authService: AuthenticationService
+  ) { }
+
+  logout() {
+    this.authService.logout();
+  }
+
 }
