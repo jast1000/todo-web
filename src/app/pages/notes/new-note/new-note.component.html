@@ -1,1 +1,22 @@
-<p>new-note works!</p>
+<form class="note-form" [formGroup]="noteForm" (ngSubmit)="save()">
+    <div class="note-container-inputs">
+        <mat-form-field [floatLabel]="false">
+            <mat-label>Título</mat-label>
+            <input matInput placeholder="Titulo" formControlName="title">
+            <mat-error *ngIf="noteForm.get('title').invalid">El título es requerido</mat-error>
+        </mat-form-field>
+    
+        <mat-form-field [floatLabel]="false">
+            <mat-label>Nota</mat-label>
+            <textarea matInput placeholder="Contenido de nota" formControlName="content"></textarea>
+            <mat-error *ngIf="noteForm.get('content').invalid">El contenido de la nota es requerido</mat-error>
+        </mat-form-field>
+    
+    </div>
+    
+    <div class="note-container-buttons">
+        <button mat-raised-button class="note-form-button" routerLink="/notes">Cancelar</button>
+        <button type="submit" mat-raised-button color="primary" class="note-form-button" [disabled]="!noteForm.valid">Guardar</button>
+        <button type="submit" mat-raised-button color="primary" class="note-form-button" [disabled]="!noteForm.valid">Actualizar</button>
+    </div>
+</form>

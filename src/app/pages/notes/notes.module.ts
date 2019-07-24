@@ -4,14 +4,19 @@ import { NotesRoutingModule } from './notes-routing.module';
 import { MatSharedModule } from '../../mat-shared.module';
 import { ListNotesComponent } from './list-notes/list-notes.component';
 import { NewNoteComponent } from './new-note/new-note.component';
-
+import { DeleteNoteDialogComponent } from '../notes/list-notes/delete-note-dialog/delete-note-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [ListNotesComponent, NewNoteComponent],
+  declarations: [ListNotesComponent, NewNoteComponent, DeleteNoteDialogComponent],
   imports: [
     CommonModule,
     MatSharedModule,
-    NotesRoutingModule
+    NotesRoutingModule,
+    ReactiveFormsModule
+  ],
+  entryComponents: [
+    DeleteNoteDialogComponent
   ]
 })
 export class NotesModule { }

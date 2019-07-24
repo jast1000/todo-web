@@ -14,7 +14,6 @@ export class AuthGuard implements CanActivate {
   ) { }
 
   async canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    console.log('Soy el guard!');
     const user = await this.afAuth.authState.pipe(first()).toPromise();
     if (!user) {
       this.router.navigate(['/']);

@@ -1,0 +1,20 @@
+.note-form {
+    margin: 10px 20px;
+}
+
+.note-container-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-container-inputs > * {
+    width: 100%;
+}
+
+.note-container-buttons {
+    text-align: center;
+}
+
+.note-form-button {
+    margin: 10px;
+}
