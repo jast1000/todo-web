@@ -6,6 +6,7 @@ import { AuthGuard } from '../../auth.guard';
 
 const routes: Routes = [
   { path: '', component: ListNotesComponent, canActivate: [AuthGuard] },
+  { path: 'edit-note/:id', component: NewNoteComponent, canActivate: [AuthGuard] },
   { path: 'new-note', component: NewNoteComponent, canActivate: [AuthGuard] }
 ];
 

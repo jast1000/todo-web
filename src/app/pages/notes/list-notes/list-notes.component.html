@@ -2,6 +2,10 @@
     <mat-icon>add</mat-icon>
 </button>
 
+<div class="notes-empty" *ngIf="!notes || notes.length == 0">
+    <mat-icon aria-hidden="false">sentiment_dissatisfied</mat-icon>
+</div>
+
 <mat-grid-list cols="4" rowHeight="250px">
     <mat-grid-tile *ngFor="let note of notes">
         <mat-card class="note-card">
@@ -13,7 +17,7 @@
                 <p>{{note.content}}</p>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-button color="primary">EDITAR</button>
+                <button mat-button color="primary" [routerLink]="['edit-note', note.id]">EDITAR</button>
                 <button mat-button color="warn" (click)="delete(note)">ELIMINAR</button>
             </mat-card-actions>
         </mat-card>

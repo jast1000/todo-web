@@ -16,7 +16,7 @@
     
     <div class="note-container-buttons">
         <button mat-raised-button class="note-form-button" routerLink="/notes">Cancelar</button>
-        <button type="submit" mat-raised-button color="primary" class="note-form-button" [disabled]="!noteForm.valid">Guardar</button>
-        <button type="submit" mat-raised-button color="primary" class="note-form-button" [disabled]="!noteForm.valid">Actualizar</button>
+        <button type="submit" mat-raised-button color="primary" class="note-form-button" [disabled]="!noteForm.valid" *ngIf="!note">Guardar</button>
+        <button type="submit" mat-raised-button color="primary" class="note-form-button" [disabled]="!noteForm.valid" *ngIf="note">Actualizar</button>
     </div>
 </form>
