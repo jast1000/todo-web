@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  todoAPI: 'http://jast.duckdns.org:3000',
+  todoAPI: 'https://todo-api-73aatvkgua-uc.a.run.app',
   firebase: {
     apiKey: 'AIzaSyBZU1vm_KhaY2jGnwdedPNvEwaIvzk3y0o',
     authDomain: 'todo-app-demo-d2efa.firebaseapp.com',

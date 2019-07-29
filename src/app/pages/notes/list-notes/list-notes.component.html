@@ -11,7 +11,7 @@
         <mat-card class="note-card">
             <mat-card-header>
                 <mat-card-title>{{note.title}}</mat-card-title>
-                <mat-card-subtitle>{{note.creation}}</mat-card-subtitle>
+                <mat-card-subtitle>{{note.creation | date: 'dd/MM/yyyy hh:mm aaa '}}</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
                 <p>{{note.content}}</p>
